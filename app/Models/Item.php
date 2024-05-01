@@ -13,9 +13,10 @@ class Item extends Model
      */
     protected $fillable = [
         'user_id',
-        'name',
-        'type',
-        'detail',
+        'name',//書籍名
+        'type',//種別
+        'detail',//詳細
+        'update',//更新日時
     ];
 
     /**

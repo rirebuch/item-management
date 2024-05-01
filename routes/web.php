@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,11 @@ Route::prefix('items')->group(function () {
     Route::get('/', [App\Http\Controllers\ItemController::class, 'index']);
     Route::get('/add', [App\Http\Controllers\ItemController::class, 'add']);
     Route::post('/add', [App\Http\Controllers\ItemController::class, 'add']);
+
+    Route::get('/{items}/edit', [App\Http\Controllers\ItemController::class, 'edit']);
+    Route::post('/update/{item}', [ItemController::class, 'update']);
+    Route::delete('/{item}', [ItemController::class, 'delete']);
+    
+
+
 });

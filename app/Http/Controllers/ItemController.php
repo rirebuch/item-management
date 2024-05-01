@@ -21,14 +21,23 @@ class ItemController extends Controller
     /**
      * 商品一覧
      */
+    // public function index()
+    // {
+    //     // 商品一覧取得
+    //     $items = Item::all();
+
+    //     return view('item.index', compact('items'));
+    //     $items = Item::select('id', 'user_id', 'title', 'category', 'detail', 'updated_at' )->get();
+    
+    //     return view('item.index', ['item' => $items]);
+    // }
     public function index()
     {
         // 商品一覧取得
-        $items = Item::all();
-
+        $items = Item::select('id', 'user_id', 'name', 'type', 'detail', 'updated_at')->get();
+    
         return view('item.index', compact('items'));
     }
-
     /**
      * 商品登録
      */
@@ -39,8 +48,9 @@ class ItemController extends Controller
             // バリデーション
             $this->validate($request, [
                 'name' => 'required|max:100',
+                
             ]);
-
+            
             // 商品登録
             Item::create([
                 'user_id' => Auth::user()->id,
@@ -53,5 +63,12 @@ class ItemController extends Controller
         }
 
         return view('item.add');
+    }
+    /**
+     * 書籍編集フォームを表示する
+     */
+    public function edit(Item $item)
+    {
+        return view('item.edit', compact('item')); // 編集フォームのビューを表示
     }
 }

@@ -31,6 +31,15 @@
                         <div class="form-group">
                             <label for="type">種別</label>
                             <input type="text" class="form-control" id="type" name="type" placeholder="種別">
+                                <select name="category" id="category">
+                                    <option value=""  ></option>
+                                    <option value="1" @if( old('type',$item->type) ==1) selected @endif >小説</option>
+                                    <option value="2" @if( old('type',$item->type) ==2) selected @endif >新書</option>
+                                    <option value="3" @if( old('type',$item->type) ==3) selected @endif >雑誌</option>
+                                    <option value="4" @if( old('type',$item->type) ==4) selected @endif >エッセイ</option>
+                                    <option value="5" @if( old('type',$item->type) ==5) selected @endif >コミックス</option>
+                                    <option value="6" @if( old('type',$item->type) ==6) selected @endif >その他</option>
+                                </select>
                         </div>
 
                         <div class="form-group">

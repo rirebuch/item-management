@@ -21,13 +21,15 @@
                     </div>
                 </div>
                 <div class="card-body table-responsive p-0">
-                    <table class="table table-hover text-nowrap">
+                    <table class="table table-hover text-nowrap"> 
+                        <!-- ↑がデザイン決めてる -->
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>名前</th>
                                 <th>種別</th>
                                 <th>詳細</th>
+                                <th>更新日時</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,6 +39,14 @@
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->type }}</td>
                                     <td>{{ $item->detail }}</td>
+                                </tr>
+
+                                </td>
+                                <td>{{ $item->updated_at }}</td>               
+                                <td>
+                                <!-- ※編集ボタンを入れる場所 -->
+                                <a href="{{ url('/items/' . $item->id . '/edit') }}" class="button">編集</a>
+                                </td>
                                 </tr>
                             @endforeach
                         </tbody>
