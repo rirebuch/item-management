@@ -21,7 +21,26 @@
                     </div>
                 </div>
                 <div class="card-body table-responsive p-0">
-                    <table class="table table-hover text-nowrap"> 
+                    <!-- <table class="table table-hover text-nowrap">  -->
+                    <table class="table table-hover text-nowrap">
+                            <style>
+                            td:nth-child(1) {
+                                width: 1px;
+                            }
+
+                            td:nth-child(2) {
+                                width: 200px;
+                            }
+
+                            td:nth-child(3) {
+                                width: 150px;
+                            }
+                            </style>
+                            <tr>
+                            <td>列1</td>
+                            <td>列2</td>
+                            <td>列3</td>
+                            </tr>
                         <!-- ↑がデザイン決めてる -->
                         <thead>
                             <tr>

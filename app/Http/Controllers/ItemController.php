@@ -67,7 +67,7 @@ class ItemController extends Controller
     /**
      * 書籍編集フォームを表示する
      */
-    public function edit(Item $item)
+    public function edit($item)
     {
         return view('item.edit', compact('item')); // 編集フォームのビューを表示
     }
