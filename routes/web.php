@@ -27,10 +27,9 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
     Route::get('/add', [App\Http\Controllers\ItemController::class, 'add']);
     Route::post('/add', [App\Http\Controllers\ItemController::class, 'add']);
 
-    Route::get('/items/{item}/edit', [App\Http\Controllers\ItemController::class, 'edit']);
+    Route::get('/{item}/edit', [App\Http\Controllers\ItemController::class, 'edit']);
     Route::post('/update/{item}', [ItemController::class, 'update']);
-    Route::delete('/{item}', [ItemController::class, 'delete']);
-    
+    Route::delete('/{id}', [ItemController::class, 'delete']);
 
 
 });

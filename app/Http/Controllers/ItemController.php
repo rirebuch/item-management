@@ -48,7 +48,6 @@ class ItemController extends Controller
             // バリデーション
             $this->validate($request, [
                 'name' => 'required|max:100',
-                
             ]);
             
             // 商品登録
@@ -67,8 +66,33 @@ class ItemController extends Controller
     /**
      * 書籍編集フォームを表示する
      */
-    public function edit($item)
+
+    public function edit($id)
     {
+        $item=Item::find($id)->first();
         return view('item.edit', compact('item')); // 編集フォームのビューを表示
+
     }
+    public function update(Request $request, Item $item)
+    {
+        $request->validate([
+            'title' => 'required|max:100',
+            'category' => 'required',
+            'detail' => 'required',
+        ],[
+            'title.required' => 'タイトルは必須です。',
+            'category.required' => '種別は必須項目です。',
+            'detail.required' => '詳細は必須項目です。'
+        ]);
+
+        // エラー出る
+        $item->update([
+            'title' => $request->title,
+            'category' => $request->category,
+            'detail' => $request->detail,
+            'user_id'=> 1
+        ]);
+        return redirect('/items')->with('success', '情報が更新されました。');
+    }
+
 }

@@ -25,7 +25,7 @@
                     <table class="table table-hover text-nowrap">
                             <style>
                             td:nth-child(1) {
-                                width: 1px;
+                                width: 50px!important;
                             }
 
                             td:nth-child(2) {
@@ -35,11 +35,16 @@
                             td:nth-child(3) {
                                 width: 150px;
                             }
+
+                            td:nth-child(4) {
+                                width: 50px!important;
+                            }
+
+                            td:nth-child(5) {
+                                width: 50px!important;
+                            }
                             </style>
-                            <tr>
-                            <td>列1</td>
-                            <td>列2</td>
-                            <td>列3</td>
+                            
                             </tr>
                         <!-- ↑がデザイン決めてる -->
                         <thead>
