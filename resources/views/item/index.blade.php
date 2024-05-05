@@ -61,16 +61,13 @@
                                 <tr>
                                     <td>{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
-                                    <td>{{ $item->type }}</td>
+                                    <td>{{ $typeNames[$item->type] }}</td>
                                     <td>{{ $item->detail }}</td>
-                                </tr>
-
-                                </td>
-                                <td>{{ $item->updated_at }}</td>               
-                                <td>
+                                    <td>{{ $item->updated_at }}</td>               
+                                    <td>
                                 <!-- ※編集ボタンを入れる場所 -->
-                                <a href="{{ url('/items/' . $item->id . '/edit') }}" class="button">編集</a>
-                                </td>
+                                        <a href="{{ url('/items/' . $item->id . '/edit') }}" button type="button" class="btn btn-outline-primary">編集</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

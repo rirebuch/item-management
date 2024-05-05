@@ -24,18 +24,18 @@
             <form action="{{ url('/items/update/' . $item->id) }}" method="post">
                 <!-- CSRFトークンを含める -->
                 @csrf
-                <label for="title">書籍名:</label><br>
-                <input type="text" id="title" name="title" value="{{ old('title',$item->title) }}" ><br>
+                <label for="name">書籍名:</label><br>
+                <input type="text" id="name" name="name" value="{{ old('name',$item->name) }}" ><br>
 
-                <label for="category">種別:</label><br>
-                <select name="category" id="category">
+                <label for="type">種別:</label><br>
+                <select name="type" id="type>
                 <option value=""  ></option>
-                    <option value="1" @if( old('category',$item->category) ==1) selected @endif >小説</option>
-                    <option value="2" @if( old('category',$item->category) ==2) selected @endif >新書</option>
-                    <option value="3" @if( old('category',$item->category) ==3) selected @endif >雑誌</option>
-                    <option value="4" @if( old('category',$item->category) ==4) selected @endif >エッセイ</option>
-                    <option value="5" @if( old('category',$item->category) ==5) selected @endif >コミックス</option>
-                    <option value="6" @if( old('category',$item->category) ==6) selected @endif >その他</option>
+                    <option value="1" @if( old('type',$item->type) ==1) selected @endif >小説</option>
+                    <option value="2" @if( old('type',$item->type) ==2) selected @endif >新書</option>
+                    <option value="3" @if( old('type',$item->type) ==3) selected @endif >雑誌</option>
+                    <option value="4" @if( old('type',$item->type) ==4) selected @endif >エッセイ</option>
+                    <option value="5" @if( old('type',$item->type) ==5) selected @endif >コミックス</option>
+                    <option value="6" @if( old('type',$item->type) ==6) selected @endif >その他</option>
                 </select>
 
                 <label for="detail">詳細:</label><br>
