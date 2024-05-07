@@ -32,4 +32,5 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
     Route::delete('/{id}', [ItemController::class, 'delete']);
 
 
+    Route::get('/', 'BookController@index')->name('item.index');//検索機能
 });

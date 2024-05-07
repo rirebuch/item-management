@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => '商品管理',
+    'title' => '書籍管理',
     'title_prefix' => '',
     'title_postfix' => '',
 

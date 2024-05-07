@@ -1,24 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>書籍情報編集</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- ここに必要に応じてCSSやJavaScriptのリンクを追加 -->
-</head>
+@extends('adminlte::page')
+
+@section('title', '書籍編集')
+
+@section('content_header')
+    <h1></h1>
+@stop
+
+@section('content')
     <body>
         <div class="container py-3">
             <h1>書籍情報編集</h1>
             <a href="/items" class="btn btn-outline-secondary btn-sm">戻る</a>
             @if ($errors->any())
-            <div class="alert" style="color: red;">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+                <div class="alert" style="color: red;">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             @endif 
             <!-- フォームのアクションは、更新処理を行うルートに設定。PUTメソッドを使用 -->
             <form action="{{ url('/items/update/' . $item->id) }}" method="post">
@@ -28,8 +28,8 @@
                 <input type="text" id="name" name="name" value="{{ old('name',$item->name) }}" ><br>
 
                 <label for="type">種別:</label><br>
-                <select name="type" id="type>
-                <option value=""  ></option>
+                <select name="type" id="type">
+                    <option value=""></option>
                     <option value="1" @if( old('type',$item->type) ==1) selected @endif >小説</option>
                     <option value="2" @if( old('type',$item->type) ==2) selected @endif >新書</option>
                     <option value="3" @if( old('type',$item->type) ==3) selected @endif >雑誌</option>
@@ -46,12 +46,17 @@
             </form>
         
             <form action="{{ url('/items/' . $item->id) }}" method="POST">
-            @csrf
-            @method('DELETE')
-            {{-- <button type="submit" class="btn btn-outline-danger" onclick="return confirm('本当に削除しますか？')">削除</button> --}}
-            <button type="submit" class="btn btn-outline-danger"  onclick="return confirm('本当に削除しますか？')">削除</button>
+                @csrf
+                @method('DELETE')
+                {{-- <button type="submit" class="btn btn-outline-danger" onclick="return confirm('本当に削除しますか？')">削除</button> --}}
+                <button type="submit" class="btn btn-outline-danger"  onclick="return confirm('本当に削除しますか？')">削除</button>
             </form>
         </div>
     </body>
-</html>
+@endsection
 
+@section('css')
+@stop
+
+@section('js')
+@stop
