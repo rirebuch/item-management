@@ -291,18 +291,8 @@ return [
 
     'menu' => [
         [
-            'text' => '書籍一覧','お気に入り','新刊情報',
+            'text' => '書籍一覧',
             'url'  => 'items',
-            'icon' => 'fas fa-gamepad',
-        ],
-        [
-            'text' => 'お気に入り',
-            'url'  => 'items/favorite',
-            'icon' => 'fas fa-gamepad',
-        ],
-        [
-            'text' => '新刊情報',
-            'url'  => 'items/new',
             'icon' => 'fas fa-gamepad',
         ],
         // AdminLTEデフォルト
