@@ -45,6 +45,7 @@ class ItemController extends Controller
             // バリデーション
             $this->validate($request, [
                 'name' => 'required|max:100',
+                'detail' => 'require|max:500',
             ]);
             // 商品登録
             Item::create([
@@ -71,7 +72,7 @@ class ItemController extends Controller
         $request->validate([
             'name' => 'required|max:100',
             'type' => 'required',
-            'detail' => 'required',
+            'detail' => 'required|max:500',
         ],[
             'name.required' => 'タイトルは必須です。',
             'type.required' => '種別は必須項目です。',

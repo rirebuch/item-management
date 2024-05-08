@@ -40,7 +40,7 @@
 
                 <label for="detail">詳細:</label><br>
                 <textarea name="detail" id="detail" cols="30" rows="10">{{ old('detail',$item->detail) }}</textarea>
-                <input type="submit" value="更新" class="btn btn-primary">
+                <input type="submit" value="更新" maxlength="500" class="btn btn-primary">
                 <!-- class を　btn btn-primary  を使って更新ボタンのデザインを変える方法を要確認-->
             </form>
         
