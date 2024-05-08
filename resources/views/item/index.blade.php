@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', '商品一覧')
+@section('title', '書籍一覧')
 
 @section('content_header')
-    <h1>商品一覧</h1>
+    <h1>書籍一覧</h1>
 @stop
 
 @section('content')
@@ -11,11 +11,11 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">商品一覧</h3>
+                    <h3 class="card-title">書籍一覧</h3>
                     <div class="card-tools">
                         <div class="input-group input-group-sm">
                             <div class="input-group-append">
-                                <a href="{{ url('items/add') }}" class="btn btn-default">商品登録</a>
+                                <a href="{{ url('items/add') }}" class="btn btn-default">書籍登録</a>
                             </div>
                         </div>
                     </div>
@@ -61,16 +61,13 @@
                                 <tr>
                                     <td>{{ $item->id }}</td>
                                     <td>{{ $item->name }}</td>
-                                    <td>{{ $item->type }}</td>
+                                    <td>{{ $typeNames[$item->type] }}</td>
                                     <td>{{ $item->detail }}</td>
-                                </tr>
-
-                                </td>
-                                <td>{{ $item->updated_at }}</td>               
-                                <td>
+                                    <td>{{ $item->updated_at }}</td>               
+                                    <td>
                                 <!-- ※編集ボタンを入れる場所 -->
-                                <a href="{{ url('/items/' . $item->id . '/edit') }}" class="button">編集</a>
-                                </td>
+                                        <a href="{{ url('/items/' . $item->id . '/edit') }}" button type="button" class="btn btn-outline-primary">編集</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
