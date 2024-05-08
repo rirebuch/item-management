@@ -62,7 +62,7 @@ class ItemController extends Controller
      */
     public function edit($id)
     {
-        $item=Item::find($id)->first();
+        $item=Item::find($id);
         return view('item.edit', compact('item')); // 編集フォームのビューを表示
     }
     // 書籍更新

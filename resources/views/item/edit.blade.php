@@ -25,7 +25,7 @@
                 <!-- CSRFトークンを含める -->
                 @csrf
                 <label for="name">書籍名:</label><br>
-                <input type="text" id="name" name="name" value="{{ old('name',$item->name) }}" ><br>
+                <input type="text" id="name" name="name" value="{{ old('name', $item->name) }}" ><br>
 
                 <label for="type">種別:</label><br>
                 <select name="type" id="type">
@@ -40,7 +40,6 @@
 
                 <label for="detail">詳細:</label><br>
                 <textarea name="detail" id="detail" cols="30" rows="10">{{ old('detail',$item->detail) }}</textarea>
-
                 <input type="submit" value="更新" class="btn btn-primary">
                 <!-- class を　btn btn-primary  を使って更新ボタンのデザインを変える方法を要確認-->
             </form>
