@@ -83,17 +83,3 @@
 
 @section('js')
 @stop
-<!-- resources/views/books/index.blade.php -->
-
-<form action="{{ route('books.index') }}" method="GET">
-    <input type="text" name="query" placeholder="検索">
-    <button type="submit">検索</button>
-</form>
-
-<ul>
-    @foreach ($items as $item)
-        <li>{{ $item->title }} - {{ $item->author }}</li>
-    @endforeach
-</ul>
-
-{{ $items->links() }}

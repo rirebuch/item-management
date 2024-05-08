@@ -63,12 +63,12 @@ return [
     |
     */
 
-    'logo' => '<b>商品管理</b>',
+    'logo' => '<b>書籍管理</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => '商品管理',
+    'logo_img_alt' => '書籍管理',
 
     /*
     |--------------------------------------------------------------------------
@@ -291,11 +291,20 @@ return [
 
     'menu' => [
         [
-            'text' => '商品一覧',
+            'text' => '書籍一覧','お気に入り','新刊情報',
             'url'  => 'items',
             'icon' => 'fas fa-gamepad',
         ],
-
+        [
+            'text' => 'お気に入り',
+            'url'  => 'items/favorite',
+            'icon' => 'fas fa-gamepad',
+        ],
+        [
+            'text' => '新刊情報',
+            'url'  => 'items/new',
+            'icon' => 'fas fa-gamepad',
+        ],
         // AdminLTEデフォルト
         /*
         // Navbar items:

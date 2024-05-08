@@ -1,9 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', '商品登録')
+@section('title', '書籍登録')
 
 @section('content_header')
-    <h1>商品登録</h1>
+    <h1>書籍登録</h1>
+    <a href="/items" class="btn btn-outline-secondary btn-sm">戻る</a>
 @stop
 
 @section('content')
