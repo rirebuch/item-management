@@ -43,9 +43,13 @@ class ItemController extends Controller
         // POSTリクエストのとき
         if ($request->isMethod('post')) {
             // バリデーション
-            $this->validate($request, [
+            $request->validate([
                 'name' => 'required|max:100',
-                'detail' => 'required|max:500',
+                'detail' => 'required|string|max:500',
+            ],[
+                'name.required' => 'タイトルは必須です。',
+                'type.required' => '種別は必須項目です。',
+                'detail.required' => '詳細は必須項目です。'
             ]);
             // 商品登録
             Item::create([
@@ -58,6 +62,7 @@ class ItemController extends Controller
         }
         return view('item.add');
     }
+  
     /**
      * 書籍編集フォームを表示する
      */

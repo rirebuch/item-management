@@ -47,7 +47,6 @@
                         <div class="form-group">
                             <label for="detail">詳細</label>
                             <input type="text" class="form-control" id="detail" name="detail" maxlength="500" placeholder="詳細説明">
-
                         </div>
                     </div>
 
