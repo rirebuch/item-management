@@ -1,43 +1,28 @@
-## 商品管理システム
+## 書籍管理システム
 
-### 環境構築手順
+## 概要
 
-* Gitクローン
-* .env.example をコピーして .env を作成
-* MySQLのデータベース作成（名前：item_management）
-* Macの場合 .env の DB_PASSWORD を root に修正（Windowsは修正不要）
+このシステムは、ログイン機能付き書籍管理システムです。
+取り扱う書籍の登録、一覧表示（書籍情報の把握）、情報の削除・登録・編集を行うことができる
+システムとなっております。
 
-    ```INI
-    DB_PASSWORD=root
-    ```
+## 主な機能
+- ログイン・ログアウト機能
+- 書籍一覧画面
+- 書籍登録、編集、削除機能
 
-* APP_KEY生成
+## 開発環境
+PHP 8.3.3   
+MySQL 5.7.39  
+Laravel 10.48.4
 
-    ```console
-    php artisan key:generate
-    ```
+## 設計書
+[設計書ページへ](https://drive.google.com/drive/folders/1U_L0CFN3OsUJ6KRuMvAeFCusC1EjLIcr?usp=drive_link
+)
 
-* Composerインストール
+## システム閲覧
+[アプリケーションページへ](https://item-management-ty-f067493b8b49.herokuapp.com/)
 
-    ```console
-    composer install
-    ```
-
-* フロント環境構築
-
-    ```console
-    npm ci
-    npm run build
-    ```
-
-* マイグレーション
-
-    ```console
-    php artisan migrate
-    ```
-
-* 起動
-
-    ```console
-    php artisan serve
-    ```
+### テストアカウント情報
+ID：tttt@yy   
+パスワード：1122334455
