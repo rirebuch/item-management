@@ -1,39 +1,29 @@
 <?php
 
+declare(strict_types=1);
+
 return [
-
-    /*
-    |--------------------------------------------------------------------------
-    | Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines contain the default error messages used by
-    | the validator class. Some of these rules have multiple versions such
-    | as the size rules. Feel free to tweak each of these messages here.
-    |
-    */
-
-    'accepted'        => ':attributeを承認してください。',
-    'active_url'      => ':attributeは、有効なURLではありません。',
-    'after'           => ':attributeには、:dateより後の日付を指定してください。',
-    'after_or_equal'  => ':attributeには、:date以降の日付を指定してください。',
-    'alpha'           => ':attributeには、アルファベッドのみ使用できます。',
-    'alpha_dash'      => ":attributeには、英数字('A-Z','a-z','0-9')とハイフンと下線('-','_')が使用できます。",
-    'alpha_num'       => ":attributeには、英数字('A-Z','a-z','0-9')が使用できます。",
-    'array'           => ':attributeには、配列を指定してください。',
-    'before'          => ':attributeには、:dateより前の日付を指定してください。',
-    'before_or_equal' => ':attributeには、:date以前の日付を指定してください。',
-    'between'         => [
-        'numeric' => ':attributeには、:minから、:maxまでの数字を指定してください。',
-        'file'    => ':attributeには、:min KBから:max KBまでのサイズのファイルを指定してください。',
-        'string'  => ':attributeは、:min文字から:max文字にしてください。',
+    'accepted'             => ':attributeを承認してください。',
+    'active_url'           => ':attributeは、有効なURLではありません。',
+    'after'                => ':attributeには、:dateより後の日付を指定してください。',
+    'after_or_equal'       => ':attributeには、:date以降の日付を指定してください。',
+    'alpha'                => ':attributeには、アルファベッドのみ使用できます。',
+    'alpha_dash'           => ':attributeには、英数字(\'A-Z\',\'a-z\',\'0-9\')とハイフンと下線(\'-\',\'_\')が使用できます。',
+    'alpha_num'            => ':attributeには、英数字(\'A-Z\',\'a-z\',\'0-9\')が使用できます。',
+    'array'                => ':attributeには、配列を指定してください。',
+    'before'               => ':attributeには、:dateより前の日付を指定してください。',
+    'before_or_equal'      => ':attributeには、:date以前の日付を指定してください。',
+    'between'              => [
         'array'   => ':attributeの項目は、:min個から:max個にしてください。',
+        'file'    => ':attributeには、:min KBから:max KBまでのサイズのファイルを指定してください。',
+        'numeric' => ':attributeには、:minから、:maxまでの数字を指定してください。',
+        'string'  => ':attributeは、:min文字から:max文字にしてください。',
     ],
-    'boolean'              => ":attributeには、'true'か'false'を指定してください。",
+    'boolean'              => ':attributeには、\'true\'か\'false\'を指定してください。',
     'confirmed'            => ':attributeと:attribute確認が一致しません。',
     'date'                 => ':attributeは、正しい日付ではありません。',
     'date_equals'          => ':attributeは:dateに等しい日付でなければなりません。',
-    'date_format'          => ":attributeの形式は、':format'と合いません。",
+    'date_format'          => ':attributeの形式は、\':format\'と合いません。',
     'different'            => ':attributeと:otherには、異なるものを指定してください。',
     'digits'               => ':attributeは、:digits桁にしてください。',
     'digits_between'       => ':attributeは、:min桁から:max桁にしてください。',
@@ -45,16 +35,16 @@ return [
     'file'                 => ':attributeはファイルでなければいけません。',
     'filled'               => ':attributeは必須です。',
     'gt'                   => [
-        'numeric' => ':attributeは、:valueより大きくなければなりません。',
-        'file'    => ':attributeは、:value KBより大きくなければなりません。',
-        'string'  => ':attributeは、:value文字より大きくなければなりません。',
         'array'   => ':attributeの項目数は、:value個より大きくなければなりません。',
+        'file'    => ':attributeは、:value KBより大きくなければなりません。',
+        'numeric' => ':attributeは、:valueより大きくなければなりません。',
+        'string'  => ':attributeは、:value文字より大きくなければなりません。',
     ],
     'gte'                  => [
-        'numeric' => ':attributeは、:value以上でなければなりません。',
-        'file'    => ':attributeは、:value KB以上でなければなりません。',
-        'string'  => ':attributeは、:value文字以上でなければなりません。',
         'array'   => ':attributeの項目数は、:value個以上でなければなりません。',
+        'file'    => ':attributeは、:value KB以上でなければなりません。',
+        'numeric' => ':attributeは、:value以上でなければなりません。',
+        'string'  => ':attributeは、:value文字以上でなければなりません。',
     ],
     'image'                => ':attributeには、画像を指定してください。',
     'in'                   => '選択された:attributeは、有効ではありません。',
@@ -65,30 +55,30 @@ return [
     'ipv6'                 => ':attributeはIPv6アドレスを指定してください。',
     'json'                 => ':attributeには、有効なJSON文字列を指定してください。',
     'lt'                   => [
-        'numeric' => ':attributeは、:valueより小さくなければなりません。',
-        'file'    => ':attributeは、:value KBより小さくなければなりません。',
-        'string'  => ':attributeは、:value文字より小さくなければなりません。',
         'array'   => ':attributeの項目数は、:value個より小さくなければなりません。',
+        'file'    => ':attributeは、:value KBより小さくなければなりません。',
+        'numeric' => ':attributeは、:valueより小さくなければなりません。',
+        'string'  => ':attributeは、:value文字より小さくなければなりません。',
     ],
     'lte'                  => [
-        'numeric' => ':attributeは、:value以下でなければなりません。',
-        'file'    => ':attributeは、:value KB以下でなければなりません。',
-        'string'  => ':attributeは、:value文字以下でなければなりません。',
         'array'   => ':attributeの項目数は、:value個以下でなければなりません。',
+        'file'    => ':attributeは、:value KB以下でなければなりません。',
+        'numeric' => ':attributeは、:value以下でなければなりません。',
+        'string'  => ':attributeは、:value文字以下でなければなりません。',
     ],
     'max'                  => [
-        'numeric' => ':attributeには、:max以下の数字を指定してください。',
-        'file'    => ':attributeには、:max KB以下のファイルを指定してください。',
-        'string'  => ':attributeは、:max文字以下にしてください。',
         'array'   => ':attributeの項目は、:max個以下にしてください。',
+        'file'    => ':attributeには、:max KB以下のファイルを指定してください。',
+        'numeric' => ':attributeには、:max以下の数字を指定してください。',
+        'string'  => ':attributeは、:max文字以下にしてください。',
     ],
     'mimes'                => ':attributeには、:valuesタイプのファイルを指定してください。',
     'mimetypes'            => ':attributeには、:valuesタイプのファイルを指定してください。',
     'min'                  => [
-        'numeric' => ':attributeには、:min以上の数字を指定してください。',
-        'file'    => ':attributeには、:min KB以上のファイルを指定してください。',
-        'string'  => ':attributeは、:min文字以上にしてください。',
         'array'   => ':attributeの項目は、:min個以上にしてください。',
+        'file'    => ':attributeには、:min KB以上のファイルを指定してください。',
+        'numeric' => ':attributeには、:min以上の数字を指定してください。',
+        'string'  => ':attributeは、:min文字以上にしてください。',
     ],
     'not_in'               => '選択された:attributeは、有効ではありません。',
     'not_regex'            => ':attributeの形式が無効です。',
@@ -105,10 +95,10 @@ return [
     'required_without_all' => ':valuesが全て指定されていない場合、:attributeを指定してください。',
     'same'                 => ':attributeと:otherが一致しません。',
     'size'                 => [
-        'numeric' => ':attributeには、:sizeを指定してください。',
-        'file'    => ':attributeには、:size KBのファイルを指定してください。',
-        'string'  => ':attributeは、:size文字にしてください。',
         'array'   => ':attributeの項目は、:size個にしてください。',
+        'file'    => ':attributeには、:size KBのファイルを指定してください。',
+        'numeric' => ':attributeには、:sizeを指定してください。',
+        'string'  => ':attributeは、:size文字にしてください。',
     ],
     'starts_with'          => ':attributeは、次のいずれかで始まる必要があります。:values',
     'string'               => ':attributeには、文字を指定してください。',
@@ -117,32 +107,126 @@ return [
     'uploaded'             => ':attributeのアップロードに失敗しました。',
     'url'                  => ':attributeは、有効なURL形式で指定してください。',
     'uuid'                 => ':attributeは、有効なUUIDでなければなりません。',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Language Lines
-    |--------------------------------------------------------------------------
-    |
-    | Here you may specify custom validation messages for attributes using the
-    | convention "attribute.rule" to name the lines. This makes it quick to
-    | specify a specific custom language line for a given attribute rule.
-    |
-    */
-
-    'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
-        ],
+    'attributes'           => [
+        'address'                  => '住所',
+        'affiliate_url'            => 'アフィリエイトURL',
+        'age'                      => '年',
+        'amount'                   => '額',
+        'announcement'             => '発表',
+        'area'                     => 'エリア',
+        'audience_prize'           => '観客賞',
+        'available'                => '利用可能',
+        'birthday'                 => '誕生日',
+        'body'                     => '本文',
+        'city'                     => '市',
+        'compilation'              => '編集',
+        'concept'                  => 'コンセプト',
+        'conditions'               => '条件',
+        'content'                  => 'コンテンツ',
+        'country'                  => '国',
+        'cover'                    => 'カバー',
+        'created_at'               => '作成日',
+        'creator'                  => 'クリエーター',
+        'currency'                 => '通貨',
+        'current_password'         => '現在のパスワード',
+        'customer'                 => 'お客様',
+        'date'                     => '日付',
+        'date_of_birth'            => '生年月日',
+        'dates'                    => '日付',
+        'day'                      => '日',
+        'deleted_at'               => '削除日',
+        'description'              => '説明',
+        'display_type'             => '画面タイプ',
+        'district'                 => '地区',
+        'duration'                 => '期間',
+        'email'                    => 'eメール',
+        'excerpt'                  => '抜粋',
+        'filter'                   => 'フィルタ',
+        'finished_at'              => 'に終了しました',
+        'first_name'               => '名',
+        'gender'                   => '性別',
+        'grand_prize'              => '大賞',
+        'group'                    => 'グループ',
+        'hour'                     => '時間',
+        'image'                    => '画像',
+        'image_desktop'            => 'デスクトップイメージ',
+        'image_main'               => 'メイン画像',
+        'image_mobile'             => 'モバイル画像',
+        'images'                   => '画像',
+        'is_audience_winner'       => '視聴者の勝者です',
+        'is_hidden'                => '隠されています',
+        'is_subscribed'            => '購読されています',
+        'is_visible'               => '見える',
+        'is_winner'                => '勝者です',
+        'items'                    => 'アイテム',
+        'key'                      => '鍵',
+        'last_name'                => '姓',
+        'lesson'                   => 'レッスン',
+        'line_address_1'           => '住所1行目',
+        'line_address_2'           => '住所2行目',
+        'login'                    => 'ログイン',
+        'message'                  => 'メッセージ',
+        'middle_name'              => 'ミドルネーム',
+        'minute'                   => '分',
+        'mobile'                   => 'モバイル',
+        'month'                    => '月',
+        'name'                     => '名前',
+        'national_code'            => '国コード',
+        'number'                   => '番号',
+        'password'                 => 'パスワード',
+        'password_confirmation'    => 'パスワードの確認',
+        'phone'                    => '電話番号',
+        'photo'                    => '写真',
+        'portfolio'                => 'ポートフォリオ',
+        'postal_code'              => '郵便番号',
+        'preview'                  => 'プレビュー',
+        'price'                    => '価格',
+        'product_id'               => '製品番号',
+        'product_uid'              => '製品UID',
+        'product_uuid'             => '製品UUID',
+        'promo_code'               => 'プロモーションコード',
+        'province'                 => '都道府県',
+        'quantity'                 => '量',
+        'reason'                   => '理由',
+        'recaptcha_response_field' => 'recaptchaの解答',
+        'referee'                  => '審判',
+        'referees'                 => '審判員',
+        'reject_reason'            => '拒否理由',
+        'remember'                 => 'ログイン状態を保持',
+        'restored_at'              => '復元日',
+        'result_text_under_image'  => '画像の下の結果テキスト',
+        'role'                     => '権限',
+        'rule'                     => 'ルール',
+        'rules'                    => 'ルール',
+        'second'                   => '秒',
+        'sex'                      => '性別',
+        'shipment'                 => '発送',
+        'short_text'               => '短いテキスト',
+        'size'                     => 'サイズ',
+        'skills'                   => 'スキル',
+        'slug'                     => 'ナメクジ',
+        'specialization'           => '専門化',
+        'started_at'               => 'に始まりました',
+        'state'                    => '状態',
+        'status'                   => '状態',
+        'street'                   => '町名・番地',
+        'student'                  => '生徒',
+        'subject'                  => '課題',
+        'tag'                      => '鬼ごっこ',
+        'tags'                     => 'タグ',
+        'teacher'                  => '先生',
+        'terms'                    => '利用規約',
+        'test_description'         => 'テスト内容',
+        'test_locale'              => 'テストロケール',
+        'test_name'                => 'テスト名',
+        'text'                     => 'テキスト',
+        'time'                     => '時間',
+        'title'                    => 'タイトル',
+        'type'                     => 'タイプ',
+        'updated_at'               => '更新日',
+        'user'                     => 'ユーザー',
+        'username'                 => 'ユーザー名',
+        'value'                    => '価値',
+        'year'                     => '年',
     ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom Validation Attributes
-    |--------------------------------------------------------------------------
-    |
-    | The following language lines are used to swap our attribute placeholder
-    | with something more reader friendly such as "E-Mail Address" instead
-    | of "email". This simply helps us make our message more expressive.
-    |
-    */
 ];
